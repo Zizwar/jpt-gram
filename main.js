@@ -18,9 +18,9 @@ bot.start((ctx) => {
 });
 
 bot.action("search", (ctx) => {
-  const searchQuery = "بحثك هنا"; // استبدل بمحتوى بحث المستخدم الفعلي
-  const searchResult = "نتيجة البحث"; // استبدل بنتيجة البحث الفعلية
-  const replyMessage = `بحثك: ${searchQuery}\n\n${searchResult} (ID: ${ctx.from.id})`; // استبدل بنص الرد المطلوب
+  const searchQuery = "بحثك هنا"; 
+  const searchResult = "نتيجة البحث";
+  const replyMessage = `بحثك: ${searchQuery}\n\n${searchResult} (ID: ${ctx.from.id})`; 
   ctx.reply(`[${replyMessage}]`);
 });
 
