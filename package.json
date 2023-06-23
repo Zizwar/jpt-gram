@@ -27,6 +27,7 @@
   "homepage": "https://github.com/Zizwar/jpt-gram#readme",
   "dependencies": {
     "dotenv": "^16.3.1",
+    "esm": "^3.2.25",
     "nodemon": "^2.0.22",
     "pm2": "^5.3.0",
     "telegraf": "3.38.0"
