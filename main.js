@@ -10,7 +10,8 @@ bot.start((ctx) => {
   const keyboard = Markup.inlineKeyboard([
     Markup.urlButton('❤️', 'http://mlsn.me'),
     Markup.callbackButton('register', 'register'),
-    Markup.callbackButton("هل ترغب في البحث؟", "search")
+    Markup.callbackButton("هل ترغب في البحث؟", "search") ,
+    Markup.callbackButton("رسالة صوتية", "voice_message")
   ]);
 
 
@@ -39,5 +40,15 @@ bot.action("regular_membership", (ctx) => {
 bot.action("premium_membership", (ctx) => {
   ctx.reply("مرحبًا بك في عضوية مدفوعة في ملسون!");
 });
+
+bot.action("voice_message", async (ctx) => {
+    const voiceFilePath = "static/voices/testino.mp3"; 
+  
+    try {
+      await ctx.replyWithVoice({ source: voiceFilePath });
+    } catch (error) {
+      console.error("حدث خطأ أثناء إرسال الرسالة الصوتية:", error);
+    }
+  });
 
 bot.launch();
